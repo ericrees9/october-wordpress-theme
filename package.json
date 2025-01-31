@@ -1,0 +1,36 @@
+{
+    "name": "october",
+    "version": "0.0.1",
+    "description": "Rock on.",
+    "author": "Eric Rees",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "WordPress",
+        "Theme"
+    ],
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.13.3",
+        "@wordpress/scripts": "^19.2.2",
+        "dir-archiver": "^1.1.1",
+        "parcel": "^2.8.3",
+        "rtlcss": "^3.5.0",
+        "sass": "^1.62.0"
+    },
+    "rtlcssConfig": {
+        "options": {
+            "autoRename": false,
+            "autoRenameStrict": false,
+            "blacklist": {},
+            "clean": true,
+            "greedy": false,
+            "processUrls": false,
+            "stringMap": []
+        },
+        "plugins": [],
+        "map": false
+    },
+    "scripts": {
+        "watch": "parcel watch lib/scripts.js --dist-dir ./dist",
+        "build": "parcel build src/index.html --dist-dir ./dist"
+    }
+}

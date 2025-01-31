@@ -1,0 +1,1 @@
+{"mappings":"AAAA","sources":["lib/theme.css"],"sourcesContent":["body {\n    height: 100vh;\n    background: darkorange;\n    color: black;\n}"],"names":[],"version":3,"file":"scripts.css.map","sourceRoot":"../"}
