@@ -1,6 +1,95 @@
-body {
-  color: #000;
-  background: #ff8c00;
+.site-container {
   height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  background-color: var(--dark-orange);
+  width: 30vw;
+  color: var(--tan);
+  border-right: 1px solid var(--dark-green);
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.site-branding a {
+  color: var(--dark-green);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-navigation {
+  margin-top: 20px;
+}
+
+.nav-menu {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-bottom: 15px;
+}
+
+.nav-menu a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.nav-menu a:hover {
+  color: var(--dark-green);
+}
+
+.content {
+  background: var(--dark-orange);
+  color: #000;
+  width: 70vw;
+  height: 100vh;
+  margin-left: 30vw;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+:root {
+  --dark-orange: #bc6c25;
+  --light-orange: #dda15e;
+  --tan: #fefae0;
+  --dark-green: #283618;
+  --green: #606c38;
+}
+
+body {
+  background-color: var(--dark-orange);
+  color: var(--dark-green);
+}
+
+header {
+  background-color: var(--dark-orange);
+  color: var(--tan);
+}
+
+footer {
+  background-color: var(--dark-green);
+  color: var(--tan);
+}
+
+a {
+  color: var(--light-orange);
+}
+
+a:hover {
+  color: var(--dark-orange);
 }
 /*# sourceMappingURL=scripts.css.map */

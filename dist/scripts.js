@@ -596,8 +596,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"jbCvF":[function(require,module,exports,__globalThis) {
-var _themeCss = require("./theme.css");
+var _styleCss = require("/style.css");
 
-},{"./theme.css":"lmMTE"}],"lmMTE":[function() {},{}]},["bWaLb","jbCvF"], "jbCvF", "parcelRequire94c2")
+},{"/style.css":"dRy26"}],"dRy26":[function() {},{}]},["bWaLb","jbCvF"], "jbCvF", "parcelRequire94c2")
 
 //# sourceMappingURL=scripts.js.map

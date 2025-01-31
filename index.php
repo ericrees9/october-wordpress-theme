@@ -4,3 +4,5 @@
     <main id="main" class="site-main">
     </main>
 </div>
+
+<?php get_footer(); ?>

@@ -11,3 +11,36 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: october
 Domain Path: /lang
 */
+
+@import "/lib/theme.css";
+
+:root {
+    --dark-orange: #BC6C25;
+    --light-orange: #DDA15E;
+    --tan: #FEFAE0;
+    --dark-green: #283618;
+    --green: #606C38;
+}
+
+body {
+    background-color: var(--dark-orange);
+    color: var(--dark-green);
+}
+
+header {
+    background-color: var(--dark-orange);
+    color: var(--tan);
+}
+
+footer {
+    background-color: var(--dark-green);
+    color: var(--tan);
+}
+
+a {
+    color: var(--light-orange);
+}
+
+a:hover {
+    color: var(--dark-orange);
+}

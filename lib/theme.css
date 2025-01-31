@@ -1,5 +1,66 @@
-body {
+/* Layout */
+.site-container {
+    display: flex;
     height: 100vh;
-    background: darkorange;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 30vw; /* 30% of the viewport width */
+    background-color: var(--dark-orange);
+    color: var(--tan);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid var(--dark-green);
+}
+
+.site-branding a {
+    color: var(--dark-green);
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-navigation {
+    margin-top: 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-menu li {
+    margin-bottom: 15px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--dark-green);
+}
+
+/* Content */
+.content {
+    width: 70vw; /* 70% of the viewport width */
+    margin-left: 30vw; /* Offset by sidebar width */
+    padding: 40px;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--dark-orange);
     color: black;
 }
