@@ -106,23 +106,6 @@ function october_image_sizes() {
 add_action( 'after_setup_theme', 'october_image_sizes' );
 
 /**
- * Enqueue Scripts and Styles
- *
- * Note: This can also be handled by the October class for better modularization.
- */
-// function october_enqueue_scripts() {
-//     // Enqueue main stylesheet from /dist
-//     wp_enqueue_style( 'october-style', get_template_directory_uri() . '/dist/scripts.css', array(), filemtime( get_template_directory() . '/dist/scripts.css' ) );
-
-//     // Enqueue main JavaScript from /dist
-//     wp_enqueue_script( 'october-script', get_template_directory_uri() . '/dist/scripts.js', array(), filemtime( get_template_directory() . '/dist/scripts.js' ), true );
-
-//     // Enqueue Google Fonts or other external styles/scripts if needed
-//     wp_enqueue_style( 'october-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap', false );
-// }
-// add_action( 'wp_enqueue_scripts', 'october_enqueue_scripts' );
-
-/**
  * Initialize the October Class
  *
  * Checks if the October class exists and initializes it to modularize theme functions.
@@ -159,28 +142,6 @@ function october_october_missing_notice() {
  * Ensure that the October class is included before attempting to initialize it.
  */
 require_once get_template_directory() . '/lib/classes/class-october.php';
-
-/**
- * Additional Theme Support and Customizations
- *
- * You can add more theme-specific functions below or within the October class.
- */
-
-/**
- * Example: Custom Excerpt Length
- */
-function october_custom_excerpt_length( $length ) {
-    return 20;
-}
-add_filter( 'excerpt_length', 'october_custom_excerpt_length', 999 );
-
-/**
- * Example: Disable Gutenberg Block Editor
- */
-function october_disable_gutenberg() {
-    add_filter( 'use_block_editor_for_post', '__return_false', 10 );
-}
-add_action( 'init', 'october_disable_gutenberg' );
 
 /**
  * Example: Register Custom Post Types
