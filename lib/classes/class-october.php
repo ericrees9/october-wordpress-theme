@@ -53,9 +53,9 @@ class October {
             [
                 'family'   => 'Karla',
                 'variants' => [
-                    [ 'weight' => '400', 'italic' => true ],
-                    [ 'weight' => '600', 'italic' => true  ],
-                    [ 'weight' => '800', 'italic' => true  ],
+                    [ 'weight' => '400', 'italic' => false ],
+                    [ 'weight' => '600', 'italic' => false  ],
+                    [ 'weight' => '800', 'italic' => false  ],
                 ],
             ],
             [

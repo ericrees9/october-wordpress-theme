@@ -6,9 +6,6 @@
             <?php while ( have_posts() ) : the_post(); ?>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <header class="entry-header">
-                        <h1><?php the_title(); ?></h1>
-                    </header>
 
                     <div class="entry-content">
                         <?php the_content(); ?>
@@ -33,6 +30,5 @@
             </article>
         <?php endif; ?>
     </main>
+    <?php get_footer(); ?>
 </div>
-
-<?php get_footer(); ?>

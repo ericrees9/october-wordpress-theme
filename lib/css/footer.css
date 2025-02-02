@@ -1,0 +1,8 @@
+footer {
+    background-color: var(--dark-orange);
+    color: var(--tan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}

@@ -1,14 +1,6 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @package october
- */
-?>
 
-        </div><!-- #content -->
+
+        </div>
 
         <footer id="colophon" class="site-footer" role="contentinfo">
             <div class="container">
@@ -39,7 +31,7 @@
                      */
                     do_action( 'your_theme_footer_after' );
                     ?>
-                </div><!-- .site-info -->
+                </div>
 
                 <div class="footer-widgets">
                     <?php
@@ -60,12 +52,11 @@
                             ?>
                         </div><!-- .footer-widgets-container -->
                     <?php endif; ?>
-                </div><!-- .footer-widgets -->
-            </div><!-- .container -->
-        </footer><!-- #colophon -->
+                </div>
+            </div>
+        </footer>
 
-    </div><!-- #page -->
-
+    </div>
     <?php wp_footer(); ?>
 
     </body>

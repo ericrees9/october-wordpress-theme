@@ -9,10 +9,11 @@
 <body <?php body_class(); ?>>
 
     <div class="site-container">
-        <!-- Sidebar Navigation -->
         <aside class="sidebar">
-
             <nav class="site-navigation">
+                <?php if(!is_front_page()): ?>
+                    <a class="home-nav-link" href="<?php echo esc_url(home_url('/')); ?>">Home</a>
+                <?php endif; ?>
                 <?php
                     wp_nav_menu( array(
                         'theme_location' => 'primary',
@@ -21,10 +22,8 @@
                     ) );
                 ?>
             </nav>
+            <div class="nav-toggles">
+            </div>
         </aside>
 
-        <!-- Main Content -->
         <main class="content">
-            <header class="site-header">
-                <h1><?php bloginfo( 'name' ); ?></h1>
-            </header>

@@ -1,0 +1,80 @@
+{
+    "version": 1,
+    "settings": {
+      "color": {
+        "palette": [
+          {
+            "name": "Light Orange",
+            "slug": "light-orange",
+            "color": "#DDA15E"
+          },
+          {
+            "name": "Dark Orange",
+            "slug": "dark-orange",
+            "color": "#BC6C25"
+          },
+          {
+            "name": "Tan",
+            "slug": "tan",
+            "color": "#FEFAE0"
+          },
+          {
+            "name": "Green",
+            "slug": "green",
+            "color": "#606C38"
+          },
+          {
+            "name": "Dark Green",
+            "slug": "dark-green",
+            "color": "#283618"
+          }
+        ]
+      },
+        "typography": {
+        "fontFamilies": [
+            {
+            "name": "Karla",
+            "slug": "karla",
+            "fontFace": [
+                {
+                "fontFamily": "Karla",
+                "src": [
+                    "url(https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap)"
+                ],
+                "fontWeight": "400 700",
+                "fontStyle": "normal"
+                }
+            ]
+            },
+            {
+            "name": "Inconsolata",
+            "slug": "inconsolata",
+            "fontFace": [
+                {
+                "fontFamily": "Inconsolata",
+                "src": [
+                    "url(https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap)"
+                ],
+                "fontWeight": "400 700",
+                "fontStyle": "normal"
+                }
+            ]
+            }
+        ]
+        }
+    },
+    "styles": {
+        "elements": {
+        "h1, h2, h3, h4, h5, h6": {
+            "typography": {
+            "fontFamily": "var(--wp--preset--font-family--karla)"
+            }
+        },
+        "p, span, li, a, blockquote": {
+            "typography": {
+            "fontFamily": "var(--wp--preset--font-family--inconsolata)"
+            }
+        }
+      }
+    }
+  }

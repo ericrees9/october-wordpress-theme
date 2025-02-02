@@ -15,6 +15,7 @@ Domain Path: /lang
 @import "/lib/theme.css";
 
 :root {
+    --sidebar-width: 24vw;
     --dark-orange: #BC6C25;
     --light-orange: #DDA15E;
     --tan: #FEFAE0;
@@ -22,34 +23,6 @@ Domain Path: /lang
     --green: #606C38;
     --heading-font: 'Karla', sans-serif;
     --body-font: 'Inconsolata', monospace;
-}
-
-body {
-    background-color: var(--tan);
-    color: var(--dark-green);
-    font-family: var(--body-font);
-}
-
-h1, h2, h3, h4, h5, h6, header, nav {
-    font-family: var(--heading-font);
-}
-
-header {
-    background-color: var(--dark-orange);
-    color: var(--tan);
-}
-
-footer {
-    background-color: var(--dark-green);
-    color: var(--tan);
-}
-
-a {
-    color: var(--light-orange);
-}
-
-a:hover {
-    color: var(--dark-orange);
 }
 
 /*
