@@ -20,11 +20,18 @@ Domain Path: /lang
     --tan: #FEFAE0;
     --dark-green: #283618;
     --green: #606C38;
+    --heading-font: 'Karla', sans-serif;
+    --body-font: 'Inconsolata', monospace;
 }
 
 body {
     background-color: var(--tan);
     color: var(--dark-green);
+    font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6, header, nav {
+    font-family: var(--heading-font);
 }
 
 header {

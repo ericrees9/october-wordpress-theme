@@ -5,6 +5,11 @@
     overflow: hidden;
 }
 
+body {
+    margin: 0px;
+    overscroll-behavior-y: none;
+}
+
 /* Sidebar */
 .sidebar {
     width: 30vw; /* 30% of the viewport width */
@@ -36,11 +41,12 @@
     list-style: none;
     padding: 0;
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 .nav-menu li {
     margin-bottom: 15px;
+    list-style: none;
 }
 
 .nav-menu a {

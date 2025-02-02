@@ -26,6 +26,7 @@ class October {
         require_once get_template_directory() . '/lib/classes/class-october-widgets.php';
         require_once get_template_directory() . '/lib/classes/class-october-custom-post-types.php';
         require_once get_template_directory() . '/lib/classes/class-october-blocks.php';
+        require_once get_template_directory() . '/lib/classes/class-october-fonts-enqueuer.php';
     }
 
     /**
@@ -47,7 +48,27 @@ class October {
         // Initialize blocks    
         $october_blocks = new October_Blocks();
 
-        // Add more initializations as needed
+        // Initialize fonts enqueuer
+        $fonts_to_load = [
+            [
+                'family'   => 'Karla',
+                'variants' => [
+                    [ 'weight' => '400', 'italic' => true ],
+                    [ 'weight' => '600', 'italic' => true  ],
+                    [ 'weight' => '800', 'italic' => true  ],
+                ],
+            ],
+            [
+                'family'   => 'Inconsolata',
+                'variants' => [
+                    [ 'weight' => '200', 'italic' => true ],
+                    [ 'weight' => '400', 'italic' => true ],
+                    [ 'weight' => '600', 'italic' => true  ],
+                    [ 'weight' => '900', 'italic' => true  ],
+                ],
+            ],
+        ];
+        $october_fonts = new October_Fonts_Enqueuer( $fonts_to_load );
     }
 
     // Add more methods to handle different functionalities

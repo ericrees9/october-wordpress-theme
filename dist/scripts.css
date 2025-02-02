@@ -4,6 +4,11 @@
   overflow: hidden;
 }
 
+body {
+  overscroll-behavior-y: none;
+  margin: 0;
+}
+
 .sidebar {
   background-color: var(--dark-orange);
   width: 30vw;
@@ -31,7 +36,7 @@
 }
 
 .nav-menu {
-  text-align: center;
+  text-align: left;
   width: 100%;
   padding: 0;
   list-style: none;
@@ -39,6 +44,7 @@
 
 .nav-menu li {
   margin-bottom: 15px;
+  list-style: none;
 }
 
 .nav-menu a {
@@ -68,11 +74,18 @@
   --tan: #fefae0;
   --dark-green: #283618;
   --green: #606c38;
+  --heading-font: "Karla", sans-serif;
+  --body-font: "Inconsolata", monospace;
 }
 
 body {
   background-color: var(--tan);
   color: var(--dark-green);
+  font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6, header, nav {
+  font-family: var(--heading-font);
 }
 
 header {
