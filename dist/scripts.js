@@ -597,7 +597,42 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"jbCvF":[function(require,module,exports,__globalThis) {
 var _styleCss = require("/style.css");
+var _blockIndexJs = require("/lib/blocks/block-index.js");
 
-},{"/style.css":"dRy26"}],"dRy26":[function() {},{}]},["bWaLb","jbCvF"], "jbCvF", "parcelRequire94c2")
+},{"/style.css":"dRy26","/lib/blocks/block-index.js":"fyAGi"}],"dRy26":[function() {},{}],"fyAGi":[function(require,module,exports,__globalThis) {
+var _blockIndexCss = require("../blocks/block-index.css");
+var _resumeBlockEditorJsx = require("../blocks/resume-block/resume-block-editor.jsx");
+
+},{"../blocks/block-index.css":"5iket","../blocks/resume-block/resume-block-editor.jsx":"bpeTN"}],"5iket":[function() {},{}],"bpeTN":[function(require,module,exports,__globalThis) {
+const { registerBlockType } = wp.blocks;
+const { useBlockProps } = wp.blockEditor;
+registerBlockType('october/resume-block', {
+    title: 'Resume Block',
+    icon: 'admin-users',
+    category: 'widgets',
+    edit: ()=>{
+        return /*#__PURE__*/ React.createElement("div", {
+            ...useBlockProps(),
+            __source: {
+                fileName: "lib/blocks/resume-block/resume-block-editor.jsx",
+                lineNumber: 10,
+                columnNumber: 13
+            },
+            __self: this
+        }, /*#__PURE__*/ React.createElement("p", {
+            __source: {
+                fileName: "lib/blocks/resume-block/resume-block-editor.jsx",
+                lineNumber: 11,
+                columnNumber: 17
+            },
+            __self: this
+        }, "Edit Mode: Resume Block"));
+    },
+    save: ()=>{
+        return null; // Using PHP render_callback
+    }
+});
+
+},{}]},["bWaLb","jbCvF"], "jbCvF", "parcelRequire94c2")
 
 //# sourceMappingURL=scripts.js.map

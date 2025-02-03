@@ -27,11 +27,15 @@ class October_Blocks {
         $blocks = glob( $blocks_dir . '*/', GLOB_ONLYDIR );
 
         foreach ( $blocks as $block_dir ) {
-            // Construct the path to the individual block's PHP file
-            $block_php = trailingslashit( $block_dir ) . 'individual-block.php';
+            // Extract the directory name
+            $block_name = basename( $block_dir );
+
+            // Construct the path to the block's PHP file
+            $block_php = trailingslashit( $block_dir ) . $block_name . '.php';
             
             if ( file_exists( $block_php ) ) {
                 include_once $block_php;
+                // error_log('Loading block file: ' . $block_php);
             }
         }
     }
