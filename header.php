@@ -11,9 +11,7 @@
     <div class="site-container">
         <aside class="sidebar">
             <nav class="site-navigation">
-                <?php if(!is_front_page()): ?>
-                    <a class="home-nav-link" href="<?php echo esc_url(home_url('/')); ?>">Home</a>
-                <?php endif; ?>
+                <a href="<?php echo esc_url(home_url('/')); ?>" id="home-link">Home</a>
                 <?php
                     wp_nav_menu( array(
                         'theme_location' => 'primary',

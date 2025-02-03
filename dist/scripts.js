@@ -597,6 +597,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"jbCvF":[function(require,module,exports,__globalThis) {
 var _styleCss = require("/style.css");
+// import '/lib/js/nav-scripts.js'
 var _blockIndexJs = require("/lib/blocks/block-index.js");
 
 },{"/style.css":"dRy26","/lib/blocks/block-index.js":"fyAGi"}],"dRy26":[function() {},{}],"fyAGi":[function(require,module,exports,__globalThis) {

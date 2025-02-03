@@ -15,6 +15,7 @@ class October_Scripts {
     public function register() {
         add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
+        add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_custom_ajax_navigation') );
     }
 
     /**
@@ -54,6 +55,10 @@ class October_Scripts {
                 include_once $block;
             }
         }
+    }
+
+    function enqueue_custom_ajax_navigation() {
+        wp_enqueue_script('ajax-page-load', get_template_directory_uri() . '/lib/js/nav-scripts.js', array(), null, true);
     }
 
 }

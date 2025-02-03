@@ -21,24 +21,34 @@
   top: 33.3333vh;
 }
 
-a.home-nav-link {
+a#home-link {
   color: var(--tan);
-  margin-bottom: 15px;
+  clip-path: inset(0 0 100%);
+  user-select: none;
+  margin-bottom: 10px;
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
-  list-style: none;
-  transition: all .3s;
+  transition: clip-path .5s ease-out;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
 
-  &:hover {
-    color: var(--dark-green);
-    text-decoration: underline;
+  &.show {
+    clip-path: inset(0);
+
+    &:hover {
+      color: var(--dark-green);
+      text-decoration: underline;
+      transition: all .3s;
+    }
   }
 }
 
 .nav-menu {
   text-align: left;
   width: 100%;
+  margin-top: 0;
   padding: 0;
   list-style: none;
 }
