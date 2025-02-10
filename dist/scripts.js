@@ -642,23 +642,24 @@ document.addEventListener("DOMContentLoaded", function() {
     const homeLink = document.getElementById("home-link");
     const sidebar = document.getElementById("sidebar");
     const mobileMenuButton = document.getElementById("mobile_menu_checkbox");
-    // Function to fetch page content asynchronously
+    // Function to fetch page content asynchronously from the WordPress API
     async function fetchPageContent(slug, isHistoryPush = true) {
         try {
             let apiUrl = "/wp-json/wp/v2/pages";
-            // If slug is empty (homepage), fetch the homepage data
+            // If slug is provided, fetch that page; otherwise, load the homepage (adjust slug as needed)
             if (slug) apiUrl += `?slug=${slug}`;
-            else apiUrl += `?slug=homepage`; // Change 'homepage' to your actual homepage slug
+            else apiUrl += `?slug=homepage`;
             const response = await fetch(apiUrl);
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
             const data = await response.json();
             if (data.length > 0) {
                 mainContent.innerHTML = data[0].content.rendered;
-                // Ensure proper history updates
+                document.title = "Eric Rees" + (slug ? ` > ${data[0].title.rendered}` : "");
+                // Only update browser history if needed
                 if (isHistoryPush) history.pushState({
                     slug
                 }, "", slug ? `/${slug}` : "/");
-                // **Update "show" class on home-link**
+                // Update the "show" class on homeLink as needed
                 if (homeLink) {
                     if (window.location.pathname === "/") homeLink.classList.remove("show");
                     else homeLink.classList.add("show");
@@ -668,17 +669,33 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error("Error loading page:", error);
         }
     }
-    // Ensure homepage is stored in history state on first load
-    if (!history.state) history.replaceState({
-        slug: ""
-    }, "", "/");
-    // Handle navigation clicks for all nav links except the Home link
+    // Determine the initial slug from the URL.
+    // If the pathname is not "/" then extract the slug from it.
+    let initialSlug = "";
+    if (window.location.pathname !== "/") {
+        // This assumes your URL structure is like "/some-slug"
+        const parts = window.location.pathname.split("/").filter(Boolean);
+        initialSlug = parts.pop();
+    }
+    // Instead of forcing the base URL, initialize the state from the URL
+    history.replaceState({
+        slug: initialSlug
+    }, "", window.location.pathname);
+    // On initial load, fetch the page content based on the current slug.
+    fetchPageContent(initialSlug, false);
+    // Listen for popstate events (back/forward navigation)
+    window.addEventListener("popstate", function(event) {
+        // If state exists, load the corresponding page content without pushing a new state.
+        if (event.state) fetchPageContent(event.state.slug, false);
+    });
+    // Handle navigation clicks for all nav links
     navLinks.forEach((link)=>{
         link.addEventListener("click", async function(event) {
             event.preventDefault();
             const url = this.getAttribute("href");
-            const slug = url.split("/").filter(Boolean).pop(); // Extract slug
-            if (this === homeLink) await fetchPageContent("", true); // Load homepage
+            const slug = url.split("/").filter(Boolean).pop(); // Extract slug from URL
+            // If this is the home link, use an empty slug; otherwise, use the extracted slug
+            if (this === homeLink) await fetchPageContent("", true);
             else await fetchPageContent(slug, true);
         });
     });
