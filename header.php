@@ -9,7 +9,15 @@
 <body <?php body_class(); ?>>
 
     <div class="site-container">
-        <aside class="sidebar">
+        <div class="mobile-menu-btn">
+            <input type="checkbox" id="mobile_menu_checkbox">
+            <label for="mobile_menu_checkbox">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </div>
+        <aside class="sidebar" id="sidebar">
             <nav class="site-navigation">
                 <a href="<?php echo esc_url(home_url('/')); ?>" id="home-link">Home</a>
                 <?php

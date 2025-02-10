@@ -33,6 +33,7 @@ a:hover {
     grid-template-columns: var(--sidebar-width) auto;
     grid-template-rows: auto;
     overflow: hidden;
+    background-color: var(--dark-orange);
 }
 
 .content {
@@ -52,3 +53,48 @@ a:hover {
     flex-grow: 1;
     padding: 20px 40px;
 }
+
+/* ---------------------------------------------------------
+   Responsive
+---------------------------------------------------------- */
+@media (max-width: 768px) {
+    .site-container {
+      /* grid-template-columns: auto; */
+      grid-template-columns: 1fr;
+    }
+      
+    .sidebar.active .site-navigation {
+        width: auto;
+    }
+      
+    .content {
+        padding-top: 5rem;
+        margin-left: 0;
+        padding: 1rem 1rem .25rem;
+        height: unset;
+        grid-column: unset;
+    }
+    
+    #main-content.content-area {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0);
+        transition: background 2s ease-in;
+        &:before {
+            background: rgba(0, 0, 0, 0);
+        }
+    }
+    #main-content.content-area.darken:before {
+        content: " ";
+        z-index: 10;
+        display: block;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.35);
+        transition: background .2s ease-in;
+    }
+  }
