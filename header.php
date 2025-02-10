@@ -32,4 +32,4 @@
             </div>
         </aside>
 
-        <main class="content" id="main-content">
+        <main class="content">

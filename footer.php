@@ -12,19 +12,6 @@
                     do_action( 'your_theme_footer_before' );
                     ?>
 
-                    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'your-theme-textdomain' ) ); ?>">
-                        <?php printf( esc_html__( 'Proudly powered by %s', 'your-theme-textdomain' ), 'WordPress' ); ?>
-                    </a>
-
-                    <?php
-                    // Display the current year and site name
-                    printf(
-                        esc_html__( ' | &copy; %1$s %2$s. All rights reserved.', 'your-theme-textdomain' ),
-                        date( 'Y' ),
-                        '<a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html( get_bloginfo( 'name' ) ) . '</a>'
-                    );
-                    ?>
-
                     <?php
                     /**
                      * Fires after the footer text for additional content.

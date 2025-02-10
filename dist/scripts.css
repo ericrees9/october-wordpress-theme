@@ -213,7 +213,7 @@ a:hover {
   overflow: hidden;
 }
 
-#main-content.content {
+.content {
   background: var(--dark-orange);
   color: #000;
   flex-direction: column;
@@ -241,16 +241,35 @@ a:hover {
   }
 
   .content {
-    width: 100%;
     height: unset;
+    grid-column: unset;
     margin-left: 0;
     padding: 1rem 1rem .25rem;
   }
 
-  .content-area {
+  #main-content.content-area {
+    background: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: background 2s ease-in;
+
+    &:before {
+      background: none;
+    }
+  }
+
+  #main-content.content-area.darken:before {
+    content: " ";
+    z-index: 10;
+    background: #00000059;
+    height: 100%;
+    transition: background .2s ease-in;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 
