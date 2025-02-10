@@ -33,9 +33,10 @@ a:hover {
     grid-template-columns: var(--sidebar-width) auto;
     grid-template-rows: auto;
     overflow: hidden;
+    background-color: var(--dark-orange);
 }
 
-.content {
+#main-content.content {
     grid-column: 2;
     width: auto;
     height: 100vh;
@@ -44,6 +45,7 @@ a:hover {
     overflow-y: auto;
     background: var(--dark-orange);
     color: black;
+    /* position: relative; */
 }
 
 .content-area {
@@ -52,3 +54,30 @@ a:hover {
     flex-grow: 1;
     padding: 20px 40px;
 }
+
+/* ---------------------------------------------------------
+   Responsive
+---------------------------------------------------------- */
+@media (max-width: 768px) {
+    .site-container {
+      /* grid-template-columns: auto; */
+      grid-template-columns: 1fr;
+    }
+      
+    .sidebar.active .site-navigation {
+        width: auto;
+    }
+      
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 1rem 1rem .25rem;
+        height: unset;
+    }
+    
+    .content-area {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+  }
