@@ -1,6 +1,6 @@
 footer {
-    background-color: var(--dark-orange);
-    color: var(--tan);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;

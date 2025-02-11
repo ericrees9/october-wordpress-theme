@@ -23,6 +23,52 @@ Domain Path: /lang
     --green: #606C38;
     --heading-font: 'Karla', sans-serif;
     --body-font: 'Inconsolata', monospace;
+	--bg-color: var(--dark-orange);      /* For containers, header, etc. */
+	--text-color: var(--tan);              /* For general text */
+	--header-bg: var(--dark-orange);
+	--header-text: var(--tan);
+	--link-color: var(--light-orange);
+	--link-hover: var(--tan);
+}
+
+[data-theme="dark"] {
+	--bg-color: var(--dark-orange);
+	--text-color: var(--dark-green);
+	--header-bg: var(--dark-green);
+	--header-text: var(--dark-green);
+	--link-color: var(--orange-orange);
+	--link-hover: var(--dark-green);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-color: var(--dark-orange);
+		--text-color: var(--dark-green);
+		--header-bg: var(--dark-green);
+		--header-text: var(--dark-green);
+		--link-color: var(--orange-orange);
+		--link-hover: var(--dark-green);
+	}
+}
+
+[data-theme="light"] {
+	--bg-color: var(--tan);
+	--text-color: var(--dark-green);
+	--header-bg: var(--tan);
+	--header-text: var(--dark-green);
+	--link-color: var(--green);
+	--link-hover: var(--dark-green);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-color: var(--tan);
+		--text-color: var(--dark-green);
+		--header-bg: var(--tan);
+		--header-text: var(--dark-green);
+		--link-color: var(--green);
+		--link-hover: var(--dark-green);
+	}
 }
 
 /*
