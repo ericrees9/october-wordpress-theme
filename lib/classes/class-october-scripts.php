@@ -16,6 +16,7 @@ class October_Scripts {
         add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
         add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
         add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_custom_ajax_navigation') );
+        // add_filter( 'body_class', array( $this, 'add_page_slug_body_class' ) );
     }
 
     /**
@@ -57,9 +58,17 @@ class October_Scripts {
         }
     }
 
-    function enqueue_custom_ajax_navigation() {
+    public function enqueue_custom_ajax_navigation() {
         // wp_enqueue_script('ajax-page-load', get_template_directory_uri() . '/lib/js/ajax-scripts.js', array(), null, true);
     }
+
+    // public function add_page_slug_body_class( $classes ) {
+    //     global $post;
+    //     if ( isset( $post ) ) {
+    //         $classes[] =  $post->post_name;
+    //     }
+    //     return $classes;
+    // }
 
 }
 

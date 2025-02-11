@@ -29,6 +29,12 @@
                 ?>
             </nav>
             <div class="nav-toggles">
+                <div class ="toggle-switch">
+                    <label>
+                        <input type ="checkbox">
+                        <span class ="toggle-slider dark" id="dl-slider"></span>
+                    </label>
+                </div>
             </div>
         </aside>
 
