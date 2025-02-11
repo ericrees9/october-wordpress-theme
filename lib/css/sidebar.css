@@ -2,8 +2,8 @@
 .sidebar {
     grid-column: 1;
     width: var(--sidebar-width);
-    background-color: var(--dark-orange);
-    color: var(--tan);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -30,7 +30,7 @@
 }
 
 a#home-link {
-    color: var(--tan);
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
@@ -69,14 +69,14 @@ a#home-link {
 }
 
 .nav-menu a {
-    color: var(--tan);
+    color: var(--link-color);
     text-decoration: none;
     font-size: 18px;
     transition: 0.3s;
 }
 
 .nav-menu a:hover {
-    color: var(--dark-green);
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
@@ -85,6 +85,62 @@ a#home-link {
     position: absolute;
     bottom: 0;
     width: 100%;
+    transform: translateY(-2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .toggle-switch {
+        position: relative;
+        width: 100px;
+      }
+      
+      /* The label is 32px tall with a pill shape (half of 32px = 16px border-radius) */
+      label {
+        position: absolute;
+        width: 100%;
+        height: 32px;
+        background-color: var(--dark-green);
+        border-radius: 16px;
+        cursor: pointer;
+      }
+      
+      input {
+        position: absolute;
+        display: none;
+      }
+      
+      /* The slider fills the label */
+      .toggle-slider {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        transition: 0.3s;
+      }
+      
+      /* Background color when toggled */
+      input:checked ~ .toggle-slider {
+        background-color: var(--dark-green);
+      }
+      
+      .toggle-slider::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 8px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        box-shadow: inset 9px -1px 0 0 var(--tan);
+        background-color: var(--dark-green);
+        transition: 0.3s;
+      }
+      
+      input:checked ~ .toggle-slider::before {
+        transform: translateX(61px);
+        background-color: var(--tan);
+        box-shadow: none;
+      }
 }
 
 /* --------------------------------------------------------

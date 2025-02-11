@@ -655,6 +655,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (data.length > 0) {
                 mainContent.innerHTML = data[0].content.rendered;
                 document.title = "Eric Rees" + (slug ? ` > ${data[0].title.rendered}` : "");
+                Array.from(document.body.classList).filter((cls)=>cls.startsWith("page-")).forEach((cls)=>document.body.classList.remove(cls));
+                // Add a new class based on the slug (or 'page-home' if slug is empty)
+                document.body.classList.add(slug ? `page-${slug}` : "page-home");
                 // Only update browser history if needed
                 if (isHistoryPush) history.pushState({
                     slug
@@ -704,26 +707,22 @@ document.addEventListener("DOMContentLoaded", function() {
         const slug = event.state ? event.state.slug : ""; // Extract slug from state
         await fetchPageContent(slug, false);
     });
-    // Make sure all elements exist
+    //Mutation Observer for Sidebar Opening and Closing
     if (!mobileMenuButton || !sidebar || !mainContent) {
         console.error("One or more required elements were not found.");
         return;
     }
-    // Helper function: sync checkbox with the sidebar's active state
     function syncCheckbox() {
         mobileMenuButton.checked = sidebar.classList.contains("active");
     }
-    // Toggle function to add/remove classes and update checkbox state
     function toggleMenu() {
         sidebar.classList.toggle("active");
         mainContent.classList.toggle("darken");
         syncCheckbox();
     }
-    // When the mobile menu checkbox is clicked, toggle the menu
     mobileMenuButton.addEventListener("click", function() {
         toggleMenu();
     });
-    // When clicking on the main content, if the sidebar is open, close it
     mainContent.addEventListener("click", function() {
         if (sidebar.classList.contains("active")) {
             sidebar.classList.remove("active");
@@ -731,16 +730,57 @@ document.addEventListener("DOMContentLoaded", function() {
             syncCheckbox();
         }
     });
-    // Set up a MutationObserver to watch for changes to the sidebar's class attribute.
-    // This will keep the mobile menu checkbox in sync even if other code modifies the sidebar.
     const observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
             if (mutation.type === "attributes" && mutation.attributeName === "class") syncCheckbox();
         });
     });
-    // Start observing the sidebar element for attribute (class) changes
     observer.observe(sidebar, {
         attributes: true
+    });
+    // if( darkLightSlider ) {
+    //     darkLightSlider.addEventListener("click", function () {
+    //         if ( darkLightSlider.classList.contains("dark") ) {
+    //             darkLightSlider.classList.remove("dark");
+    //             darkLightSlider.classList.add("light");
+    //             localStorage.setItem('theme', 'light');
+    //         } else {
+    //             darkLightSlider.classList.remove("light");
+    //             darkLightSlider.classList.add("dark");
+    //             localStorage.setItem('theme', 'dark');
+    //         } 
+    //     })
+    // }
+    // DARK/LIGHT TOGGLE SECTION
+    const checkbox = document.querySelector('.toggle-switch input[type="checkbox"]');
+    const darkLightSlider = document.getElementById('dl-slider');
+    // Determine the stored theme (default to "dark" if not set)
+    const storedTheme = localStorage.getItem('theme') || 'dark';
+    if (storedTheme === 'light') {
+        darkLightSlider.classList.remove('dark');
+        darkLightSlider.classList.add('light');
+        checkbox.checked = true;
+        document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+        darkLightSlider.classList.remove('light');
+        darkLightSlider.classList.add('dark');
+        checkbox.checked = false;
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    checkbox.addEventListener('change', function() {
+        if (checkbox.checked) {
+            // Switch to light mode
+            darkLightSlider.classList.remove('dark');
+            darkLightSlider.classList.add('light');
+            localStorage.setItem('theme', 'light');
+            document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+            // Switch to dark mode
+            darkLightSlider.classList.remove('light');
+            darkLightSlider.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
     });
 });
 

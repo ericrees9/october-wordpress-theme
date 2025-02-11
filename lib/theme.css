@@ -3,11 +3,12 @@
 @import './css/footer.css';
 
 body {
-    background-color: var(--tan);
-    color: var(--dark-green);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: var(--body-font);
     margin: 0px;
     overscroll-behavior-y: none;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, header, nav {
@@ -15,16 +16,16 @@ h1, h2, h3, h4, h5, h6, header, nav {
 }
 
 header {
-    background-color: var(--dark-orange);
-    color: var(--tan);
+    background-color: var(--bg-color);
+    color: var(--);
 }
 
 a {
-    color: var(--light-orange);
+    color: var(--link-color);
 }
 
 a:hover {
-    color: var(--dark-orange);
+    color: var(--link-hover);
 }
 
 .site-container {
@@ -33,7 +34,7 @@ a:hover {
     grid-template-columns: var(--sidebar-width) auto;
     grid-template-rows: auto;
     overflow: hidden;
-    background-color: var(--dark-orange);
+    background-color: var(--bg-color);
 }
 
 .content {
@@ -43,7 +44,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    background: var(--dark-orange);
+    background: var(--bg-color);
     color: black;
 }
 
@@ -52,6 +53,14 @@ a:hover {
     flex-direction: column;
     flex-grow: 1;
     padding: 20px 40px;
+}
+
+.page-home, .page-contact {
+    #main-content {
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
 }
 
 /* ---------------------------------------------------------
