@@ -1,6 +1,7 @@
 /* Imports */
 @import './css/sidebar.css';
 @import './css/footer.css';
+@import './css/homepage.css';
 
 body {
     background-color: var(--bg-color);

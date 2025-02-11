@@ -30,6 +30,10 @@
             </nav>
             <div class="nav-toggles">
                 <div class ="toggle-switch">
+                    <div class="word-wrapper">
+                        <div class="dark-words">dark</div>
+                        <div class="light-words">light</div>
+                    </div>
                     <label>
                         <input type ="checkbox">
                         <span class ="toggle-slider dark" id="dl-slider"></span>
