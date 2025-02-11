@@ -1,0 +1,21 @@
+.page-home {
+    h1 {
+        line-height: 84px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-home {
+        #main-content.content-area {
+            align-items: flex-start;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .page-home {
+        #main-content.content-area {
+            padding: 20px 0px;
+        }
+    }       
+}

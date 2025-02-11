@@ -1,6 +1,7 @@
 /* Imports */
 @import './css/sidebar.css';
 @import './css/footer.css';
+@import './css/homepage.css';
 
 body {
     background-color: var(--bg-color);
@@ -79,7 +80,7 @@ a:hover {
     .content {
         padding-top: 5rem;
         margin-left: 0;
-        padding: 1rem 1rem .25rem;
+        padding: 1rem 1rem .25rem 2.25rem;
         height: unset;
         grid-column: unset;
     }
