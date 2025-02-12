@@ -1,0 +1,8 @@
+.page-history {
+    ul.wp-block-list {
+        margin-bottom: 0px;
+    }
+    blockquote.wp-block-quote.is-layout-flow.wp-block-quote-is-layout-flow {
+        margin-top: 0px;
+    }
+}
