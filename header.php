@@ -11,8 +11,7 @@
     <div class="site-container">
         <div class="mobile-menu-btn">
             <input type="checkbox" id="mobile_menu_checkbox">
-            <label for="mobile_menu_checkbox">
-                <span class="screen-reader-text">Toggle mobile menu</span>
+            <label for="mobile_menu_checkbox" aria-label="Mobile menu open and close">
                 <div></div>
                 <div></div>
                 <div></div>
