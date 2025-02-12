@@ -89,7 +89,7 @@ a#home-link {
 }
 
 .nav-toggles {
-  height: calc(var(--vh, 1vh) * 15);
+  height: calc(var(--vh, 1vh) * 20);
   flex-direction: column;
   justify-content: center;
   align-items: center;
