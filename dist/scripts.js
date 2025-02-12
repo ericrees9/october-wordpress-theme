@@ -680,7 +680,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     function syncCheckbox() {
         // mobileMenuButton.checked = sidebar.classList.contains("active");
-        mobileMenuButton.checked = document.body.classList.contains("active");
+        mobileMenuButton.checked = document.body.classList.contains("sidebar-active");
     }
     function toggleMenu() {
         // sidebar.classList.toggle("active");

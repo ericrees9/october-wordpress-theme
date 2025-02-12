@@ -92,7 +92,7 @@ a#home-link {
 }
 
 .nav-toggles {
-    height: calc(var(--vh, 1vh) * 15);
+    height: calc(var(--vh, 1vh) * 20);
     position: absolute;
     bottom: 0;
     width: 100%;
