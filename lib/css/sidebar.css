@@ -206,7 +206,7 @@ a#home-link {
       transform: translateX(0);
     }
 
-    body.sidebar-active main.content {
+    body.sidebar-active {
         overflow: hidden;
     }
       
