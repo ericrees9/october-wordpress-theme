@@ -44,10 +44,10 @@ a#home-link {
     clip-path: inset(0 0 100% 0);
     transition: clip-path .5s ease-out;
     margin-bottom: 10px;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
+    -webkit-user-select: none;        
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
     &.show {
         clip-path: inset(0 0 0 0);
         &:hover {
