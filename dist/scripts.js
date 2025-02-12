@@ -679,10 +679,12 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
     function syncCheckbox() {
-        mobileMenuButton.checked = sidebar.classList.contains("active");
+        // mobileMenuButton.checked = sidebar.classList.contains("active");
+        mobileMenuButton.checked = document.body.classList.contains("active");
     }
     function toggleMenu() {
-        sidebar.classList.toggle("active");
+        // sidebar.classList.toggle("active");
+        document.body.classList.toggle("sidebar-active");
         mainContent.classList.toggle("darken");
         syncCheckbox();
     }
@@ -690,8 +692,8 @@ document.addEventListener("DOMContentLoaded", function() {
         toggleMenu();
     });
     mainContent.addEventListener("click", function() {
-        if (sidebar.classList.contains("active")) {
-            sidebar.classList.remove("active");
+        if (document.body.classList.contains("sidebar-active")) {
+            document.body.classList.remove("sidebar-active");
             mainContent.classList.remove("darken");
             syncCheckbox();
         }
