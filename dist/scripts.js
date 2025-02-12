@@ -598,44 +598,10 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"jbCvF":[function(require,module,exports,__globalThis) {
 var _styleCss = require("/style.css");
 var _navScriptsJs = require("/lib/js/nav-scripts.js");
-var _blockIndexJs = require("/lib/blocks/block-index.js");
+var _themeScriptsJs = require("/lib/js/theme-scripts.js"); // import '/lib/blocks/block-index.js'
 
-},{"/style.css":"dRy26","/lib/blocks/block-index.js":"fyAGi","/lib/js/nav-scripts.js":"cKqMc"}],"dRy26":[function() {},{}],"fyAGi":[function(require,module,exports,__globalThis) {
-var _blockIndexCss = require("../blocks/block-index.css");
-var _resumeBlockEditorJsx = require("../blocks/resume-block/resume-block-editor.jsx");
-
-},{"../blocks/block-index.css":"5iket","../blocks/resume-block/resume-block-editor.jsx":"bpeTN"}],"5iket":[function() {},{}],"bpeTN":[function(require,module,exports,__globalThis) {
-const { registerBlockType } = wp.blocks;
-const { useBlockProps } = wp.blockEditor;
-registerBlockType('october/resume-block', {
-    title: 'Resume Block',
-    icon: 'admin-users',
-    category: 'widgets',
-    edit: ()=>{
-        return /*#__PURE__*/ React.createElement("div", {
-            ...useBlockProps(),
-            __source: {
-                fileName: "lib/blocks/resume-block/resume-block-editor.jsx",
-                lineNumber: 10,
-                columnNumber: 13
-            },
-            __self: this
-        }, /*#__PURE__*/ React.createElement("p", {
-            __source: {
-                fileName: "lib/blocks/resume-block/resume-block-editor.jsx",
-                lineNumber: 11,
-                columnNumber: 17
-            },
-            __self: this
-        }, "Edit Mode: Resume Block"));
-    },
-    save: ()=>{
-        return null; // Using PHP render_callback
-    }
-});
-
-},{}],"cKqMc":[function(require,module,exports,__globalThis) {
-console.log("nav scripts are in");
+},{"/style.css":"dRy26","/lib/js/nav-scripts.js":"cKqMc","/lib/js/theme-scripts.js":"djNi1"}],"dRy26":[function() {},{}],"cKqMc":[function(require,module,exports,__globalThis) {
+// console.log("nav scripts are in");
 document.addEventListener("DOMContentLoaded", function() {
     const mainContent = document.getElementById("main-content");
     const navLinks = document.querySelectorAll("nav a");
@@ -782,6 +748,26 @@ document.addEventListener("DOMContentLoaded", function() {
             document.documentElement.setAttribute('data-theme', 'dark');
         }
     });
+});
+
+},{}],"djNi1":[function(require,module,exports,__globalThis) {
+// console.log("theme scripts are in");
+document.addEventListener('DOMContentLoaded', function() {
+    function setVh() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setVh();
+    // Debounce helper to limit the frequency of function calls
+    function debounce(func, wait = 100) {
+        let timeout;
+        return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(()=>func.apply(this, args), wait);
+        };
+    }
+    window.addEventListener('resize', debounce(setVh, 100));
+    console.log("%cLooking for easter eggs huh? Well, it's dangerous to go alone, take this! - hi@ericrees.email", "color: #ffffff; background-color: #BC6C25; font-size: 12px; padding: 8px 12px; border-radius: 4px;");
 });
 
 },{}]},["bWaLb","jbCvF"], "jbCvF", "parcelRequire94c2")
