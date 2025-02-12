@@ -7,7 +7,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    /* height: 100vh; */
+    height: calc(var(--vh, 1vh) * 100);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,7 +92,7 @@ a#home-link {
 }
 
 .nav-toggles {
-    height: 15vh;
+    height: calc(var(--vh, 1vh) * 15);
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -196,7 +197,8 @@ a#home-link {
       transition: transform 0.3s ease;
       position: absolute;
       width: calc(100vw/2.25);
-      height: 100vh;
+      /* height: 100vh; */
+      height: calc(var(--vh, 1vh) * 100);
     }
   
     /* When the sidebar is toggled open, add an 'active' class */
