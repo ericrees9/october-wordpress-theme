@@ -4,6 +4,16 @@
     }
 }
 
+@media (min-width: 1400px) {
+    .page-home {
+        #main-content.content-area {
+            p {
+                max-width: clamp(40vw, 100%, 700px)
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .page-home {
         #main-content.content-area {
