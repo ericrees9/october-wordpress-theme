@@ -74,7 +74,7 @@ a:hover {
       grid-template-columns: 1fr;
     }
       
-    .sidebar.active .site-navigation {
+    body.sidebar-active .site-navigation {
         width: auto;
     }
       

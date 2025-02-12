@@ -195,15 +195,19 @@ a#home-link {
       /* Keep the same width but hide it by moving it off-screen */
       transform: translateX(-100%);
       transition: transform 0.3s ease;
-      position: absolute;
+      position: fixed;
       width: calc(100vw/2.25);
       /* height: 100vh; */
       height: calc(var(--vh, 1vh) * 100);
     }
   
     /* When the sidebar is toggled open, add an 'active' class */
-    .sidebar.active {
+    body.sidebar-active .sidebar {
       transform: translateX(0);
+    }
+
+    body.sidebar-active main.content {
+        overflow: hidden;
     }
       
     .mobile-menu-btn {

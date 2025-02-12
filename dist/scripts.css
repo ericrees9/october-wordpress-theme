@@ -196,12 +196,16 @@ a#home-link {
     width: 44.4444vw;
     height: calc(var(--vh, 1vh) * 100);
     transition: transform .3s;
-    position: absolute;
+    position: fixed;
     transform: translateX(-100%);
   }
 
-  .sidebar.active {
+  body.sidebar-active .sidebar {
     transform: translateX(0);
+  }
+
+  body.sidebar-active main.content {
+    overflow: hidden;
   }
 
   .mobile-menu-btn {
@@ -389,7 +393,7 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .sidebar.active .site-navigation {
+  body.sidebar-active .site-navigation {
     width: auto;
   }
 
