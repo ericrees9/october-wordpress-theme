@@ -308,7 +308,7 @@ footer {
 @media (width <= 480px) {
   .page-home {
     & #main-content.content-area {
-      padding: 20px 0;
+      padding: 20px 20px 20px 40px;
     }
   }
 }
@@ -338,7 +338,7 @@ h1, h2, h3, h4, h5, h6, header, nav {
 
 header {
   background-color: var(--bg-color);
-  color: var(--);
+  color: var(--text-color);
 }
 
 a {

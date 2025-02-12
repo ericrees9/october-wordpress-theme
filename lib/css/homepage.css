@@ -25,7 +25,7 @@
 @media (max-width: 480px) {
     .page-home {
         #main-content.content-area {
-            padding: 20px 0px;
+            padding: 20px 20px 20px 40px;
         }
     }       
 }
