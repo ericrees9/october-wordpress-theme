@@ -1,6 +1,6 @@
 {
     "name": "october",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Rock on.",
     "author": "Eric Rees",
     "license": "GPL-2.0-or-later",
@@ -31,6 +31,6 @@
     },
     "scripts": {
         "watch": "parcel watch lib/scripts.js --dist-dir ./dist",
-        "build": "parcel build src/index.html --dist-dir ./dist"
+        "build": "parcel build lib/scripts.js --dist-dir ./dist"
     }
 }

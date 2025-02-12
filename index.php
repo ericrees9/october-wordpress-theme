@@ -5,20 +5,11 @@
         <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
 
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
 
-                    <div class="entry-content">
+                    <div class="entry-content" itemprop="articleBody">
                         <?php the_content(); ?>
                     </div>
-
-                    <?php if ( is_singular() ) : ?>
-                        <!-- <div class="post-navigation">
-                            <?php
-                                previous_post_link('<span class="prev">%link</span>', '← Previous Post');
-                                next_post_link('<span class="next">%link</span>', 'Next Post →');
-                            ?>
-                        </div> -->
-                    <?php endif; ?>
 
                 </article>
 

@@ -21,6 +21,10 @@
     position: absolute;
     margin: 0 auto;
     top: calc(100vh/3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-menu-btn {
@@ -30,20 +34,20 @@
 }
 
 a#home-link {
-    color: var(--text-color);
+    color: var(--dark-green);
     text-decoration: none;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     display: inline-block;
     position: relative;
     overflow: hidden;
     clip-path: inset(0 0 100% 0);
     transition: clip-path .5s ease-out;
     margin-bottom: 10px;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
+    -webkit-user-select: none;        
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
     &.show {
         clip-path: inset(0 0 0 0);
         &:hover {
@@ -60,16 +64,17 @@ a#home-link {
     width: 100%;
     text-align: left;
     margin-top: 0px;
+    text-align: center;
 }
 
 .nav-menu li {
     margin-bottom: 15px;
     list-style: none;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .nav-menu a {
-    color: var(--link-color);
+    color: var(--dark-green);
     text-decoration: none;
     font-size: 18px;
     transition: 0.3s;
@@ -80,15 +85,37 @@ a#home-link {
     text-decoration: underline;
 }
 
+[data-theme="light"] .nav-toggles .social-wrapper a:hover path {
+    fill: var(--light-orange);
+    transition: fill .2s linear;
+}
+
 .nav-toggles {
-    height: 2.5vh;
+    height: 15vh;
     position: absolute;
     bottom: 0;
     width: 100%;
     transform: translateY(-2rem);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    .social-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 8px;
+        grid-row-gap: 5px;
+        margin-bottom: 30px;
+        a:hover {
+            path {
+                fill: var(--green);
+                transition: fill .2s linear;
+            }
+        }
+    }
+
     .toggle-switch {
         position: relative;
         width: 100px;
