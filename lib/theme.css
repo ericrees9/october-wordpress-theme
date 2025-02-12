@@ -2,6 +2,7 @@
 @import './css/sidebar.css';
 @import './css/footer.css';
 @import './css/homepage.css';
+@import './css/history.css';
 
 body {
     background-color: var(--bg-color);
