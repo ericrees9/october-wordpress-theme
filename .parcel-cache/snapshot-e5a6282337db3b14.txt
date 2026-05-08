@@ -2001,18 +2001,18 @@
 54/var/www/html/wp-content/themes/october/lib/scripts.js1739373159288562728 0
 63/var/www/html/wp-content/themes/october/lib/js/theme-scripts.js1739373807464835046 0
 163/var/www/html/wp-content/themes/october/vendor/phpcompatibility/php-compatibility/PHPCompatibility/Sniffs/FunctionUse/RequiredToOptionalFunctionParametersSniff.php1577439898000000000 0
-46/var/www/html/wp-content/themes/october/lib/js1739373808000000000 1
+46/var/www/html/wp-content/themes/october/lib/js1739380714000000000 1
 77/var/www/html/wp-content/themes/october/lib/classes/class-october-widgets.php1738342357485067369 0
 77/var/www/html/wp-content/themes/october/lib/classes/class-october-scripts.php1739372595736481237 0
 69/var/www/html/wp-content/themes/october/lib/classes/class-october.php1738529315523464060 0
 76/var/www/html/wp-content/themes/october/lib/classes/class-october-blocks.php1738543778285774402 0
 58/var/www/html/wp-content/themes/october/lib/css/footer.css1739234914416188566 0
 60/var/www/html/wp-content/themes/october/lib/css/homepage.css1739371618683212029 0
-53/var/www/html/wp-content/themes/october/lib/theme.css1739371464443305362 0
+53/var/www/html/wp-content/themes/october/lib/theme.css1739380187503708914 0
 87/var/www/html/wp-content/themes/october/lib/blocks/resume-block/resume-block-editor.css1738542784588509945 0
 63/var/www/html/wp-content/themes/october/lib/blocks/resume-block1738694026000000000 1
 50/var/www/html/wp-content/themes/october/lib/blocks1738694026000000000 1
-43/var/www/html/wp-content/themes/october/lib1739373808000000000 1
+43/var/www/html/wp-content/themes/october/lib1739380714000000000 1
 49/var/www/html/wp-content/themes/october/style.css1739235618393747353 0
 52/var/www/html/wp-content/themes/october/package.json1739372673293362072 0
 87/var/www/html/wp-content/themes/october/vendor/gettext/gettext/src/Extractors/VueJs.php1716027907000000000 0
@@ -6715,7 +6715,7 @@
 99/var/www/html/wp-content/themes/october/node_modules/core-js/modules/es.typed-array.reduce-right.js1738015466286534402 0
 88/var/www/html/wp-content/themes/october/node_modules/@typescript-eslint/parser/README.md1738015459847530229 0
 88/var/www/html/wp-content/themes/october/node_modules/core-js/modules/es.iterator.find.js1738015465886577163 0
-47/var/www/html/wp-content/themes/october/lib/css1739373228000000000 1
+47/var/www/html/wp-content/themes/october/lib/css1739380550000000000 1
 100/var/www/html/wp-content/themes/october/node_modules/stylelint-scss/dist/utils/isSingleLineString.js1738015463957354625 0
 72/var/www/html/wp-content/themes/october/node_modules/neo-async/reject.js1738015456625817286 0
 96/var/www/html/wp-content/themes/october/node_modules/core-js/modules/esnext.array.to-reversed.js1738015466377515670 0
@@ -8128,7 +8128,7 @@
 100/var/www/html/wp-content/themes/october/node_modules/postcss-normalize-display-values/src/lib/map.js1738015458808143315 0
 128/var/www/html/wp-content/themes/october/node_modules/terser-webpack-plugin/node_modules/ajv/lib/vocabularies/applicator/index.ts1738015465240795855 0
 100/var/www/html/wp-content/themes/october/node_modules/postcss-ordered-values/types/rules/columns.d.ts1738015459741422777 0
-60/var/www/html/wp-content/themes/october/dist/scripts.css.map1739373224940805530 0
+60/var/www/html/wp-content/themes/october/dist/scripts.css.map1739380797193671825 0
 110/var/www/html/wp-content/themes/october/node_modules/@jridgewell/gen-mapping/dist/types/sourcemap-segment.d.ts1738015460692107051 0
 90/var/www/html/wp-content/themes/october/node_modules/sane/node_modules/braces/node_modules1738699721000000000 1
 108/var/www/html/wp-content/themes/october/node_modules/webpack/lib/runtime/MakeNamespaceObjectRuntimeModule.js1738015465680261723 0
@@ -15809,7 +15809,7 @@
 113/var/www/html/wp-content/themes/october/node_modules/@parcel/optimizer-htmlnano/node_modules/csso/dist/version.js1738015463594203260 0
 87/var/www/html/wp-content/themes/october/node_modules/cssstyle/lib/properties/opacity.js1738015457596959833 0
 73/var/www/html/wp-content/themes/october/node_modules/crc32-stream/LICENSE1738015455340716596 0
-44/var/www/html/wp-content/themes/october/dist1739373810000000000 1
+44/var/www/html/wp-content/themes/october/dist1739380797193963283 1
 102/var/www/html/wp-content/themes/october/node_modules/core-js/modules/es.set.symmetric-difference.v2.js1738015466107461368 0
 85/var/www/html/wp-content/themes/october/node_modules/tsconfig-paths/node_modules/.bin1738700677000000000 1
 70/var/www/html/wp-content/themes/october/node_modules/debounce/Makefile1738015455505780323 0
@@ -20558,7 +20558,7 @@
 86/var/www/html/wp-content/themes/october/node_modules/@swc/helpers/_/_iterable_to_array1738698457000000000 1
 119/var/www/html/wp-content/themes/october/node_modules/terser-webpack-plugin/node_modules/jest-worker/build/WorkerPool.js1738015461887089932 0
 78/var/www/html/wp-content/themes/october/node_modules/resolve/test/nonstring.js1738015463119771937 0
-56/var/www/html/wp-content/themes/october/dist/scripts.css1739373224938779880 0
+56/var/www/html/wp-content/themes/october/dist/scripts.css1739380797191609536 0
 83/var/www/html/wp-content/themes/october/node_modules/core-js/full/array/for-each.js1738015466971245627 0
 88/var/www/html/wp-content/themes/october/node_modules/which-boxed-primitive/tsconfig.json1738015455756380437 0
 74/var/www/html/wp-content/themes/october/node_modules/lodash/findLastKey.js1738015465133885694 0
@@ -23913,7 +23913,7 @@
 94/var/www/html/wp-content/themes/october/node_modules/stylelint-config-recommended/CHANGELOG.md1738015459203433800 0
 84/var/www/html/wp-content/themes/october/node_modules/jest-config/build/Defaults.d.ts1738015457927358328 0
 69/var/www/html/wp-content/themes/october/node_modules/resolve/async.js1738015459692565639 0
-59/var/www/html/wp-content/themes/october/dist/scripts.js.map1739373807504272932 0
+59/var/www/html/wp-content/themes/october/dist/scripts.js.map1739380721708078508 0
 99/var/www/html/wp-content/themes/october/node_modules/@swc/helpers/_/_class_private_field_loose_base1738698457000000000 1
 77/var/www/html/wp-content/themes/october/node_modules/discontinuous-range/test1738694385000000000 1
 65/var/www/html/wp-content/themes/october/node_modules/@types/yauzl1738694400000000000 1
@@ -25958,7 +25958,7 @@
 105/var/www/html/wp-content/themes/october/node_modules/npm-package-json-lint/dist/rules/description-type.js1738015459607698377 0
 79/var/www/html/wp-content/themes/october/node_modules/lodash/_createCaseFirst.js1738015463277582573 0
 110/var/www/html/wp-content/themes/october/node_modules/ajv-formats/node_modules/ajv/lib/vocabularies/jtd/enum.ts1738015465037531461 0
-39/var/www/html/wp-content/themes/october1739373810000000000 1
+39/var/www/html/wp-content/themes/october1739380725000000000 1
 71/var/www/html/wp-content/themes/october/node_modules/lodash/core.min.js1738015464769346702 0
 85/var/www/html/wp-content/themes/october/vendor/wp-cli/i18n-command/.github/CODEOWNERS1727781385000000000 0
 89/var/www/html/wp-content/themes/october/node_modules/es-abstract/2023/AddToKeptObjects.js1738015463185414761 0
@@ -31431,7 +31431,7 @@
 82/var/www/html/wp-content/themes/october/node_modules/is-number-object/package.json1738015458703407406 0
 73/var/www/html/wp-content/themes/october/node_modules/async/filterLimit.js1738015461508001715 0
 73/var/www/html/wp-content/themes/october/node_modules/typescript/lib/zh-tw1738696691000000000 1
-61/var/www/html/wp-content/themes/october/lib/js/nav-scripts.js1739373280347833487 0
+61/var/www/html/wp-content/themes/october/lib/js/nav-scripts.js1739380709604582459 0
 85/var/www/html/wp-content/themes/october/node_modules/@parcel/utils/src/http-server.js1738015457008237798 0
 76/var/www/html/wp-content/themes/october/node_modules/@swc/helpers/_/_dispose1738698464000000000 1
 84/var/www/html/wp-content/themes/october/node_modules/core-js/actual/iterator/find.js1738015466841223190 0
@@ -33463,7 +33463,7 @@
 131/var/www/html/wp-content/themes/october/node_modules/@parcel/optimizer-htmlnano/node_modules/postcss-normalize-url/src/normalize.js1738015460776849187 0
 134/var/www/html/wp-content/themes/october/node_modules/terser-webpack-plugin/node_modules/ajv/dist/vocabularies/validation/multipleOf.js1738015463213670584 0
 152/var/www/html/wp-content/themes/october/node_modules/@parcel/optimizer-htmlnano/node_modules/postcss-minify-font-values/types/lib/minify-family.d.ts.map1738015461421233910 0
-55/var/www/html/wp-content/themes/october/dist/scripts.js1739373807502415697 0
+55/var/www/html/wp-content/themes/october/dist/scripts.js1739380721704624637 0
 123/var/www/html/wp-content/themes/october/node_modules/@parcel/transformer-posthtml/node_modules/semver/functions/rcompare.js1738015462194015567 0
 68/var/www/html/wp-content/themes/october/node_modules/async/series.js1738015463004799433 0
 89/var/www/html/wp-content/themes/october/node_modules/micromark/lib/tokenize/code-text.mjs1738015461480350393 0
@@ -50105,7 +50105,7 @@
 65/var/www/html/wp-content/themes/october/node_modules/import-fresh1738696777000000000 1
 78/var/www/html/wp-content/themes/october/node_modules/import-fresh/node_modules1738696777000000000 1
 101/var/www/html/wp-content/themes/october/node_modules/import-fresh/node_modules/resolve-from/readme.md1738015461103641720 0
-59/var/www/html/wp-content/themes/october/lib/css/sidebar.css1739373224807760202 0
+59/var/www/html/wp-content/themes/october/lib/css/sidebar.css1739380797047083443 0
 103/var/www/html/wp-content/themes/october/node_modules/@parcel/core/test/fixtures/plugins/local-plugin.js1738015457849675824 0
 104/var/www/html/wp-content/themes/october/node_modules/import-fresh/node_modules/resolve-from/package.json1738015460922544476 0
 61/var/www/html/wp-content/themes/october/node_modules/has/test1738695152000000000 1
